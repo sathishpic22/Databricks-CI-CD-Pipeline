@@ -38,6 +38,7 @@ targets:
       host: https://adb-7405616866819876.16.azuredatabricks.net
       # We explicitly deploy to /Workspace/Users/sathish.skyuv@gmail.com to make sure we only have a single copy.
       root_path: /Workspace/Users/sathish.skyuv@gmail.com/.bundle/${bundle.name}/${bundle.target}
+      file_path: /Workspace/Shared/live
     variables:
       catalog: databrucks-ci-cd-pipelines
       schema: prod
