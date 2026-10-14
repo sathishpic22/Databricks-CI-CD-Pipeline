@@ -12,6 +12,7 @@ resources:
       libraries:
         - glob:
             include: ../src/CICDPipeline_etl/transformations/**
+      
 
       environment:
         dependencies:
