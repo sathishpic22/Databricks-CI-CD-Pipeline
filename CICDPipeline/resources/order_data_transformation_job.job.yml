@@ -6,14 +6,9 @@ resources:
       name: Order_Data_Transformation
 
       trigger:
-        # Run this job every day, exactly one day from the last run.
         periodic:
           interval: 1
           unit: DAYS
-
-      #email_notifications:
-      #  on_failure:
-      #    - your_email@example.com
 
       parameters:
         - name: catalog
@@ -22,8 +17,8 @@ resources:
           default: ${var.schema}
 
       tasks:
-    - task_key: order_data_transformation
-      notebook_task:
-        notebook_path: ../src/Order_Data_Transformation.ipynb
-    libraries:
-      - whl: ./dist/*.whl
+        - task_key: order_data_transformation
+          notebook_task:
+            notebook_path: ../src/Order_Data_Transformation.ipynb
+          libraries:
+            - whl: ../dist/*.whl
