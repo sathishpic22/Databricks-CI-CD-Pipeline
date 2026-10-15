@@ -22,6 +22,8 @@ resources:
           default: ${var.schema}
 
       tasks:
-        - task_key: order_data_transformation
-          notebook_task:
-            notebook_path: ../src/Order_Data_Transformation.ipynb
+    - task_key: order_data_transformation
+      notebook_task:
+        notebook_path: ../src/Order_Data_Transformation.ipynb
+    libraries:
+      - whl: ./dist/*.whl
