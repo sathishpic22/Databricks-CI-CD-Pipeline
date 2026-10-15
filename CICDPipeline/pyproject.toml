@@ -2,7 +2,7 @@
 name = "CICDPipeline"
 version = "0.0.1"
 authors = [{ name = "sathish.skyuv@gmail.com" }]
-requires-python = ">=3.12,<3.13"
+python_requires = ">=3.12"
 dependencies = [
     # Any dependencies for jobs and pipelines in this project can be added here
     # See also https://docs.databricks.com/dev-tools/bundles/library-dependencies
