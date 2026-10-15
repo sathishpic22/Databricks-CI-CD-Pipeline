@@ -1,5 +1,4 @@
 # Job to run the Order_Data_Transformation notebook.
-
 resources:
   jobs:
     order_data_transformation_job:
@@ -20,5 +19,11 @@ resources:
         - task_key: order_data_transformation
           notebook_task:
             notebook_path: ../src/Order_Data_Transformation.ipynb
-          libraries:
-            - whl: ../dist/*.whl
+          environment_key: default
+
+      environments:
+        - environment_key: default
+          spec:
+            environment_version: "2"
+            dependencies:
+              - ../dist/*.whl
